@@ -93,7 +93,7 @@ header {
     border: none;
     cursor: pointer;
     width: 100%;
-    max-width: 150px;
+    max-width: 180px;
     text-align: center;
 }
 
@@ -181,4 +181,28 @@ footer {
 
 .modal-content .btn {
     margin-top: 20px;
+}
+
+.modal-text h2 {
+    font-size: 1.5rem; /* Размер шрифта (можно изменить значение) */
+    font-weight: bold; /* Жирный заголовок */
+    margin-bottom: 20px;
+    color: #2c3e50; /* Можно изменить цвет */
+    text-align: left; /* Выравнивание заголовка по левому краю */
+}
+
+.modal-text {
+    text-align: left; /* Весь текст в модалке по левому краю */
+    padding: 0 10px; /* Добавим немного отступов по бокам */
+}
+
+.modal-text p, 
+.modal-text ul {
+    margin-bottom: 15px;
+    text-align: left; /* Текст и списки по левому краю */
+}
+
+.modal-text li {
+    list-style-type: disc; /* Добавим маркеры для списка */
+    margin-left: 20px; /* Отступ для маркеров */
 }

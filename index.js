@@ -5,10 +5,17 @@ function openModal(cardId) {
         text.style.display = 'none';
     });
     
+    // Формируем ID модального окна
+    const modalId = `modal-${cardId}`;
+    
     // Показываем нужный текст
-    const modalText = document.getElementById(`modal-${cardId.replace(/\s+/g, '-').toLowerCase()}`);
+    const modalText = document.getElementById(modalId);
     if (modalText) {
         modalText.style.display = 'block';
+    } else {
+        console.error(`Модальное окно с ID ${modalId} не найдено`);
+        // Можно добавить заглушку, если нужно
+        // document.getElementById('modal-default').style.display = 'block';
     }
     
     // Показываем модальное окно
