@@ -121,13 +121,13 @@
 
 
 .catalog-button {
-    border-radius: 20px;
-    background-color: #c49686;
+    border-radius: 10px;
+    background-color: #F5A53A;
     display: flex;
     gap: 17px;
     padding: 22px 19px;
     align-items: center;
-    color:#F0E9E3;
+    color:#FFFFFF;
     font-size: 20px;
     font-family: Comfortaa;
     border: 0px;
