@@ -206,3 +206,44 @@ footer {
     list-style-type: disc; /* Добавим маркеры для списка */
     margin-left: 20px; /* Отступ для маркеров */
 }
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Один столбец */
+        gap: 15px;
+    }
+    
+    .single-card-row .card-wrapper {
+        width: 100%; /* Полная ширина для одиночной карточки */
+    }
+    
+    .modal-content {
+        max-width: 90%; /* Уменьшим ширину модального окна */
+        padding: 20px;
+    }
+    
+    .card {
+        padding: 15px; /* Уменьшим отступы внутри карточек */
+    }
+    
+    .logo {
+        font-size: 1.5rem; /* Уменьшим размер логотипа */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        max-width: 100%; /* Кнопки на всю ширину */
+        padding: 10px 15px;
+    }
+    
+    .modal-text h2 {
+        font-size: 1.3rem; /* Уменьшим заголовки в модалках */
+    }
+    
+    .modal-text {
+        padding: 0; /* Уберем отступы по бокам */
+    }
+}
