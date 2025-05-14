@@ -116,7 +116,7 @@
     display: flex;
     flex-direction: column;
     line-height: normal;
-    width: 40%;
+    width: 30%;
 }
   
 .profile-image {
@@ -189,8 +189,8 @@
   
 @media (max-width: 991px) {
     .introduction-container {
-        max-width: 100%;
-        margin: 40px 10px 0 0;
+        max-width: 70%;
+        
     }
   
     .content-wrapper {
