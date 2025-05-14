@@ -1,387 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Плюша</title>
+    <title>Сайты ИТвД 3 курс 2025</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="buttons.css">
-    <link rel="stylesheet" href="picture.css">
-    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.css">
-
+    
+    
 </head>
 <body>
-    <header class="navigation-container">
-        <nav class="navigation-content">
-        <div class="navigation-menu">
-            <img class="logo" src="images/logo 4.png" alt="Логотип компании">
-            
-            <a href="index.html" class="menu-item" alt="Главная">главная</a>
-            <a href="catalog.html" class="menu-item" alt="каталог">каталог</a>
-            <a href="#own_order" class="menu-item" alt="индивидуальный заказ">индивидуальный заказ</a>
-            <a href="#reviews" class="menu-item" alt="отзывы">отзывы</a>
-        </div>
-        
-        </nav>
+    <header>
+        <div class="logo">Негzen Tutor</div>
+        <p>Образовательная платформа</p>
     </header>
     
-    
-    
-        
-    <section class="introduction-container" id="main">
-        <div class="flex-container">
-            <div class="image-column">
-                <img loading="lazy" src="images/HerzenTutor.png" alt="фотография мастерицы">
-                <button class="catalog-button">
-                    Перейти на сайт
-                </button>
+    <div class="container">
+        <h2 class="section-title">Суcle</h2>
+        <div class="cards-container">
+            <!-- Ряд 1 -->
+            <div class="card-wrapper" onclick="openModal('Карточка 1')">
+                <div class="card">
+                    <h3>ОТКРЫТЬ</h3>
+                    <div class="card-content">
+                        Описание карточки 1
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
             </div>
-
-            <div class="image-column">
-                <img loading="lazy" src="images/HerzenTutor.png" alt="фотография мастерицы">
-                <button class="catalog-button">
-                    Перейти на сайт
-                </button>
+            <div class="card-wrapper" onclick="openModal('Карточка 2')">
+                <div class="card">
+                    <h3>ОТКРЫТЬ</h3>
+                    <div class="card-content">
+                        Описание карточки 2
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
             </div>
-
-            <div class="image-column">
-                <img loading="lazy" src="images/HerzenTutor.png" alt="фотография мастерицы">
-                <button class="catalog-button">
-                    Перейти на сайт
-                </button>
+            <div class="card-wrapper" onclick="openModal('Карточка 3')">
+                <div class="card">
+                    <h3>ОТКРЫТЬ</h3>
+                    <div class="card-content">
+                        Описание карточки 3
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
             </div>
-
-
-        </div>
-        <!-- <img loading="lazy" class="fix" src="images/go_up.png" alt="Подняться вверх"> -->
-    </section>
-    
-
-    <!-- <h1>Кнопка-изображение &lt;input&gt;</h1>
-		<input type="image" src="images/go_up.png" alt="Подняться вверх">
-     -->
-    <a href="#">
-        <img loading="lazy" class="fix_arrow" src="images/go_up.png" alt="Подняться вверх">
-
-    </a>
-    
-
-    <!-- <section class="favorite-toys">
-        <h2 class="favorite-toys-title">Любимые игрушки моих клиентов</h2>
-    </section> -->
-    
-    <!-- <h2 class="favorite-toys-title">Любимые игрушки моих клиентов</h2> -->
-
-    <section class="catalog-section">
-        <h2 class="favorite-toys-title">Любимые игрушки моих клиентов</h2>
-        <!-- <img src="images/left_strelka.png" alt="посмотреть вариант слева" class="catalog-arrow" /> -->
-        <div class="catalog-content">
-            <img id='carusel_left' src="images/left_strelka.png" alt="посмотреть вариант слева" class="catalog-arrow-left" />
             
-            <div class="catalog-items">
-                <div class="catalog-item catalog-item-small">
-                    <img id='carusel_1' src="images/chicken.png" class="image_karusel" alt="Слева игрушка цыплёнок">
+            <!-- Ряд 2 -->
+            <div class="card-wrapper" onclick="openModal('Виртуальный музей')">
+                <div class="card">
+                    <h3>Виртуальный музей</h3>
+                    <div class="card-content">
+                        Лендинг ИТвД<br>
+                        ОТКРЫТЬ<br>
+                        Открыть
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
                 </div>
-                <div class="catalog-item catalog-item-large">
-                    <img id='carusel_2' src="images/capybara.png" class="image_karusel" alt="По центру игрушка капибара">
-                </div>
-                <!-- <div class="catalog-cta"> -->
-                <div class="catalog-item catalog-item-small">
-                    <img id='carusel_3' src="images/rabbit.png" class="image_karusel" alt="Справа игрушка кролик">
-                </div>
-                <!-- <div class="cta-button">
-                    <button class="catalog-button-1">
-                        Перейти в каталог
-                    </button>
-                </div> -->
             </div>
-
-            <img id='carusel_right' src="images/right_strelka.png" alt="посмотреть вариант справа" class="catalog-arrow-right" />
+            <div class="card-wrapper" onclick="openModal('Интернет-журнал')">
+                <div class="card">
+                    <h3>Интернет-журнал</h3>
+                    <div class="card-content">
+                        Нетzen Книги<br>
+                        Открытый кампус
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper" onclick="openModal('Игра')">
+                <div class="card">
+                    <h3>Игра</h3>
+                    <div class="card-content">
+                        Открыть<br>
+                        Открыть
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ряд 3 -->
+            <div class="card-wrapper" onclick="openModal('За карта')">
+                <div class="card">
+                    <h3>За карта</h3>
+                    <div class="card-content">
+                        Описание карточки 7
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper" onclick="openModal('Дополнительно')">
+                <div class="card">
+                    <h3>Дополнительно</h3>
+                    <div class="card-content">
+                        Описание карточки 8
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper" onclick="openModal('Еще один раздел')">
+                <div class="card">
+                    <h3>Еще один раздел</h3>
+                    <div class="card-content">
+                        Описание карточки 9
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Перейти</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ряд 4 - одна карточка по центру -->
+            <div class="single-card-row">
+                <div class="card-wrapper" onclick="openModal('Раздел 10')">
+                    <div class="card">
+                        <h3>Раздел 10</h3>
+                        <div class="card-content">
+                            Описание карточки 10
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn">Перейти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- <img src="images/right_strelka.png" alt="посмотреть вариант справа" class="catalog-arrow" /> -->
-    </section>
-    
-    <div class="new-button">
-        <button class="catalog-button-1">
-            Перейти в каталог
-        </button>
     </div>
     
-    
-    <section class="custom-toy-section" id="own_order">
-        <div class="perfect_toy">
-            <div class="text-column">
-            <div class="text-content"></div>
-                <h2 class="custom-toy-title">Не нашли идеальную игрушку?</h2>
-                <p class="custom-toy-description">Мы сделаем её специально для вас! Заполните форму, и мы свяжемся с вами!</p>
-                <!-- <button class="custom-toy-button" tabindex="0">Заполнить форму</button> -->
-                    <button id="myButton-1" class="cta-button-inner-2">
-                        Заполнить форму
-                    </button>        
-            </div>
-            <div  class="image-column">
-                <img loading="lazy" src="images/perfect_toy.png" alt="Лягушка не из каталога">
-            </div>
-            <!-- <h2>class="custom-toy-title">Не нашли идеальную игрушку?</h2>
-            <p class="custom-toy-description">Мы сделаем её специально для вас! Заполните форму, и мы свяжемся с вами!</p>
-            <button class="custom-toy-button" tabindex="0">Заполнить форму</button> -->
-        
-            <!-- <img loading="lazy" src="images/perfect_toy.png" alt="Подняться вверх"> -->
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Заголовок</h2>
+            <p>Это модальное окно для выбранной карточки.</p>
         </div>
-    </section>
+    </div>
     
-
-
-
-
-        
-    <!-- <section class="image-container">
-    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/28b1d574515902bd993702f15e771e1587f4d63c69ca2fe2278c2dbe83f9f424?placeholderIfAbsent=true&apiKey=9d5b60779a8442acadf65418b20b9871" class="responsive-image" alt="Description of the image" />
-    </section> -->
-    
-    
-    
-    
-
-    
-    
-    <section id = "reviews" class="review-section">
-        <h2 class="favorite-toys-title">Отзывы моих клиентов</h2>
-        <!-- <img src="images/left_strelka.png" alt="посмотреть вариант слева" class="catalog-arrow" /> -->
-        <div class="review-content">
-            <img id='carusel_review_left' src="images/left_strelka.png" alt="посмотреть вариант слева" class="review-arrow-left" />
-            
-            <div class="review-items">
-                <div class="review-item review-item-small">
-                    <img id='carusel_1' src="images/review_1.png" class="image_karusel" alt="ОТзыв 1">
-                </div>
-                <div class="review-item review-item-large">
-                    <img id='carusel_2' src="images/review_2.png" class="image_karusel" alt="ОТзыв 2">
-                </div>
-                <!-- <div class="catalog-cta"> -->
-                <div class="review-item review-item-small">
-                    <img id='carusel_3' src="images/review_3.png" class="image_karusel" alt="Отзыв 3">
-                </div>
-                <!-- <div class="cta-button">
-                    <button class="catalog-button-1">
-                        Перейти в каталог
-                    </button>
-                </div> -->
-            </div>
-
-            <img id='carusel_review_right' src="images/right_strelka.png" alt="посмотреть вариант справа" class="review-arrow-right" />
-        </div>
-        <!-- <img src="images/right_strelka.png" alt="посмотреть вариант справа" class="catalog-arrow" /> -->
-    </section>
-
-
-
-
-
-
-    
-        
-    <footer class="footer">
-        <div class="footer-content">
-        <nav class="nav-links">
-            <a href="#home" class="footer-item">Главная</a>
-            <a href="#catalog" class="footer-item">Каталог</a>
-            <a href="#own-order" class="footer-item">Индивидуальный заказ</a>
-            <a href="#reviews" class="footer-item">Отзывы</a>
-        </nav>
-        <div class="social-links">
-            <a href="#" class="social-link">
-            <img src="images/vk.png" alt="" class="social-icon" />
-            <span class="visually-hidden">Vk</span>
-            <span class="footer-item">akvarelka_na_ohote</span>
-            </a>
-            <a href="#" class="social-link">
-            <img src="images/telegram.png" alt="" class="social-icon" />
-            <span class="visually-hidden">Tg</span>
-            <a href="tel:+79220826556">+79220826556</a>
-            
-            <a href="mailto:anninferno05@mail.ru" class="social-link">
-            <img src="images/mail.png" alt="" class="social-icon" />
-            <span class="visually-hidden">Email</span>
-            <span>anninferno05@mail.ru</span>
-            </a>
-        </div>
-        </div>
+    <footer>
+        <p>&copy; 2023 Негzen Tutor. Все права защищены.</p>
     </footer>
 
-    <div id="myModal" class = "modal">
-        <div class = "modal_content">
-            <div class="modal_left">
-                <p class="form_0">
-                    Укажите ваше ФИО*
-                </p>
-                <input type="text" placeholder="Иванов Иван Иванович" class="form_1">
+    <script>
+        // Функции для работы с модальным окном
+        function openModal(title) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal').style.display = 'flex';
+        }
 
-            
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
 
-                <p class="form_0">
-                    Опишите ваши пожелания*
-                </p>
-
-                <textarea id="story" name="story" placeholder="Мне нужен зайчик с крыльями" class="form_2" rows="5" cols="33"></textarea>
-
-                <!-- <input type="text" placeholder="Мне нужен зайчик с крыльями" class="form_2"> -->
-                
-                
-
-
-            </div>
-            
-            <div class="modal_right">
-
-                <p class="form_0-1">
-                    Как с вами связаться?*
-                </p>
-
-                <textarea id="story" name="story" placeholder="По номеру телефона: +7(923)345 67-89 
-По почте:
-В телеграме: 
-В соцсетях:" class="form_3" rows="5" cols="33"></textarea>
-                
-                <p class="form_0-1">
-                    Прикрепите фото
-                </p>
-                <input type="file" placeholder="Перетащите файл с устройства в это окно" class="form_4">
-                
-                <button class = "modal_button">
-                    Отправить
-
-                </button>
-
-
-            </div>
-            <div id="myClose" class="close">&times;</div>
-            <!-- <input type="text" placeholder="По номеру телефона: \n+7(923)345 67-89 \nПо почте:\nВ телеграме: \nВ соцсетях:" class="form_3"> -->
-            
-            
-
-        </div>
-    </div>
-
-
-
-    <!-- <div id="myModal" class = "modal">
-        <div class = "modal_content">
-            <div class="modal_left">
-                <p class="form_0">
-                    Укажите ваше ФИО*
-                </p>
-                <input type="text" placeholder="Иванов Иван Иванович" class="form_1">
-
-            
-
-                <p class="form_0">
-                    Опишите ваши пожелания*
-                </p>
-
-                <textarea id="story" name="story" placeholder="Мне нужен зайчик с крыльями" class="form_2" rows="5" cols="33"></textarea>
-
-                <input type="text" placeholder="Мне нужен зайчик с крыльями" class="form_2">
-                
-                <p class="form_0">
-                    Как с вами связаться?*
-                </p>
-
-                <textarea id="story" name="story" placeholder="По номеру телефона: +7(923)345 67-89 
-По почте:
-В телеграме: 
-В соцсетях:" class="form_3" rows="5" cols="33"></textarea>
-
-
-            </div>
-            
-            <div class="modal_right">
-
-
-                
-                <p class="form_0-1">
-                    Прикрепите фото
-                </p>
-                <input type="file" placeholder="Перетащите файл с устройства в это окно" class="form_4">
-                
-            </div>
-            <div id="myClose" class="close">&times;</div>
-            <input type="text" placeholder="По номеру телефона: \n+7(923)345 67-89 \nПо почте:\nВ телеграме: \nВ соцсетях:" class="form_3">
-            
-            
-
-        </div>
-    </div> -->
-
-
-    <div id="CapybaraModal" class = "modal_card">
-        <div class = "modal_card_content">
-            <div class="modal_card_left">
-                <div>
-                    <img src="images/capybara.png" id="modal_image" class="modal_card_image" alt="Игрушка капибара">
-                </div>
-            </div>
-            
-            <div class="modal_card_right">
-                <div>
-                    <div class="modal_card_right-1">
-
-                        <p id="modal_name" class="modal_card_name">
-                            Капибара
-                        </p>
-    
-                        
-                        <div id="myCapybaraClose" class="CapybaraClose">&times;</div>
-                        
-                        
-                    </div>
-    
-                    <div>
-                        <p class="modal_card_ch">
-                            Характеристики
-                        </p>
-                        
-                        <p id="modal_characteristics" class="modal_card_txt">
-                            Вес: 550 г
-                            <br /><br />
-                            Высота: 25 см
-                            <br /><br />
-                            Цена: 2800 руб
-                        </p>
-                    </div>
-                </div>
-                
-
-
-                <div class="modal_card_right-2">
-                
-                                      
-
-                    <div>
-                        <button class = "modal_card_button">
-                            Заказать
-
-                        </button>
-                    </div>
-
-                </div>
-
-
-            </div>
-            
-
-        </div>
-    </div>
-
-
-
-    <script src="form_modal.js"></script>
-    
-    <script src="photo_modal.js"></script>
-
-    <script src="review.js"></script>
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
