@@ -94,7 +94,14 @@ header {
     cursor: pointer;
     width: 100%;
     max-width: 150px;
+    text-align: center;
 }
+
+/* Добавим этот стиль, чтобы ссылка-кнопка не имела подчеркивания */
+a.btn {
+    text-decoration: none;
+}
+
 
 .btn:hover {
     background-color: #c0392b;
