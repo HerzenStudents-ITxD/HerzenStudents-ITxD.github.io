@@ -17,7 +17,7 @@
     <div class="container">
         <div class="cards-container">
             <!-- Ряд 1 -->
-            <div class="card-wrapper" onclick="openModal('Карточка 1')">
+            <div class="card-wrapper" onclick="openModal('herzen-tutor')">
                 <div class="card">
                     <h3>Herzen tutor</h3>
                     <div class="card-content">
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card-wrapper" onclick="openModal('Еще один раздел')">
+            <div class="card-wrapper" onclick="openModal('open-campus')">
                 <div class="card">
                     <h3>Открытый кампус</h3>
                     <div class="card-content">
@@ -123,7 +123,7 @@
             
             <!-- Ряд 4 - одна карточка по центру -->
             <div class="single-card-row">
-                <div class="card-wrapper" onclick="openModal('Раздел 10')">
+                <div class="card-wrapper" onclick="openModal('herzen-map')">
                     <div class="card">
                         <h3>3d карта</h3>
                         <div class="card-content">
@@ -138,20 +138,52 @@
         </div>
     </div>
     
-    <!-- Модальное окно -->
+    <!-- Модальные окна -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title">Заголовок</h2>
-            <p>Это модальное окно для выбранной карточки.</p>
-        </div>
-    </div>
+            <div id="modal-herzen-tutor" class="modal-text">
+                <h2>Herzen Tutor</h2>
+                <p>Сайт для поиска репетиторов и студентов в РГПУ им. А.И. Герцена.</p>
+                <p>Позволяет:</p>
+                <ul>
+                    <li>Создавать анкеты преподавателей и студентов</li>
+                    <li>Искать подходящих репетиторов по предметам</li>
+                    <li>Организовывать учебный процесс</li>
+                </ul>
+                <a href="https://itvd.online/herzen-tutor/" class="btn" target="_blank">Перейти на сайт</a>
+            </div>
 
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title">Заголовок</h2>
-            <p>Это модальное окно для выбранной карточки.</p>
+            <div id="modal-open-campus" class="modal-text" style="display:none;">
+                <h2>Открытый кампус</h2>
+                <p>Открытый кампус Российского государственного педагогического университета им. А. И. Герцена - новое пространство на базе вуза, предназначенное для обмена знаниями и опытом, образовательная и культурная среда, открытая для молодежного сообщества, жителей и гостей города, субъектов образования и организаций-партнеров.</p>
+                
+                <p>Здесь вы найдете:</p>
+                <ul>
+                    <li>мастер-классы</li>
+                    <li>открытые лекции</li>
+                    <li>коворкинг-пространство</li>
+                    <li>постоянные и временные экспозиции и виртуальные выставки</li>
+                </ul>
+                
+                <p>И все это от ведущих специалистов страны в самых разнообразных областях знаний: искусство, естественные науки, лингвистика, инновации, технологии и искусственный интеллект и многое другое.</p>
+                <a href="https://itvd.online/open-campus/" class="btn" target="_blank">Перейти на сайт</a>
+            </div>
+
+            <div id="modal-herzen-map" class="modal-text" style="display:none;">
+                <h2>3D карта РГПУ им.Герцена</h2>
+                <p>«3D карта РГПУ им.Герцена» – это цифровой помощник для студентов и сотрудников РГПУ им. Герцена. Сервис объединяет ключевые университетские сервисы в единой системе:</p>
+                <ul>
+                    <li>3D-карта кампуса с поиском аудиторий, маршрутизацией и описанием инфраструктуры.</li>
+                    <li>Умное расписание, привязанное к карте: показывается не только время пар, но и расположение кабинетов.</li>
+                    <li>Новости университета с фильтрами по факультетам и важным событиям.</li>
+                    <li>Личный кабинет для доступа к расписанию и административный модуль для управления контентом</li>
+                </ul>
+                <p>Проект создан для удобной навигации, оперативного доступа к информации и комфортной учебы в РГПУ.</p>
+                <a href="https://itvd.online/herzen-map/" class="btn" target="_blank">Перейти на сайт</a>
+            </div>
+            
+            <!-- Добавьте аналогичные блоки для других карточек -->
         </div>
     </div>
     
