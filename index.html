@@ -146,29 +146,21 @@
             <p>Это модальное окно для выбранной карточки.</p>
         </div>
     </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Заголовок</h2>
+            <p>Это модальное окно для выбранной карточки.</p>
+        </div>
+    </div>
     
     <footer>
-        <p>&copy; 2023 Негzen Tutor. Все права защищены.</p>
+        <p>&copy; 2025 Негzen Tutor. Все права защищены.</p>
     </footer>
 
-    <script>
-        // Функции для работы с модальным окном
-        function openModal(title) {
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal').style.display = 'flex';
-        }
+    
 
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-        }
 
-        // Закрытие модального окна при клике вне его
-        window.onclick = function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-    </script>
 </body>
 </html>
