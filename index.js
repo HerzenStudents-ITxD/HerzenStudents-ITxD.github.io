@@ -32,3 +32,27 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+// Add hover effect for image swap
+document.querySelectorAll('.card-wrapper').forEach(wrapper => {
+    const img = wrapper.querySelector('.card-screenshot');
+    if (img && img.dataset.gif) {
+        const originalSrc = img.src;
+        const gifSrc = img.dataset.gif;
+        
+        wrapper.addEventListener('mouseenter', () => {
+            img.src = gifSrc;
+        });
+        
+        wrapper.addEventListener('mouseleave', () => {
+            img.src = originalSrc;
+        });
+    }
+});
+
+// Close modal when clicking outside
+document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
