@@ -444,3 +444,109 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Стили для кнопки с технической информацией */
+/* Стили для технической информации */
+.tech-info-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.tech-info-btn:hover {
+    background-color: var(--color-3);
+    color: white;
+    transform: scale(1.1);
+}
+
+.tech-info-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.tech-info-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.tech-info-content h3 {
+    margin-top: 0;
+    color: var(--color-2);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tech-info-content ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.tech-info-content li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.tech-info-content a {
+    color: var(--color-3);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.tech-info-content a:hover {
+    color: var(--color-2);
+    text-decoration: underline;
+}
+
+.tech-info-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.tech-info-close:hover {
+    color: var(--color-2);
+}
+
+/* Запрещаем прокрутку при открытом модальном окне */
+body.modal-open {
+    overflow: hidden;
+}

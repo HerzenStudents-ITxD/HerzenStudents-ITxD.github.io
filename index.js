@@ -1,39 +1,98 @@
+let activeTechModal = null;
+
 function openModal(cardId) {
-    // Скрываем все тексты модальных окон
+    if (activeTechModal) return; // Не открываем основное модальное окно, если уже открыто техническое
+    
     const allModalTexts = document.querySelectorAll('.modal-text');
     allModalTexts.forEach(text => {
         text.style.display = 'none';
     });
     
-    // Формируем ID модального окна
     const modalId = `modal-${cardId}`;
-    
-    // Показываем нужный текст
     const modalText = document.getElementById(modalId);
+    
     if (modalText) {
         modalText.style.display = 'block';
-    } else {
-        console.error(`Модальное окно с ID ${modalId} не найдено`);
-        // Можно добавить заглушку, если нужно
-        // document.getElementById('modal-default').style.display = 'block';
     }
     
-    // Показываем модальное окно
     document.getElementById('modal').style.display = 'flex';
+    document.body.classList.add('modal-open');
 }
 
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
+    document.body.classList.remove('modal-open');
 }
 
+function showTechInfo(id) {
+    if (activeTechModal) return;
+    
+    activeTechModal = id;
+    
+    // Создаем overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'tech-info-overlay';
+    overlay.style.display = 'block';
+    overlay.onclick = function() {
+        hideTechInfo(id);
+    };
+    document.body.appendChild(overlay);
+    
+    // Показываем контент
+    const content = document.getElementById(id);
+    if (content) {
+        content.style.display = 'block';
+    }
+    
+    // Добавляем класс для body
+    document.body.classList.add('modal-open');
+}
+
+function hideTechInfo(id) {
+    if (!activeTechModal) return;
+    
+    // Скрываем контент
+    const content = document.getElementById(id);
+    if (content) {
+        content.style.display = 'none';
+    }
+    
+    // Удаляем overlay
+    const overlay = document.querySelector('.tech-info-overlay');
+    if (overlay) {
+        overlay.remove();
+    }
+    
+    // Сбрасываем активное модальное окно
+    activeTechModal = null;
+    
+    // Удаляем класс для body
+    document.body.classList.remove('modal-open');
+    
+    // Останавливаем всплытие события
+    if (event) event.stopPropagation();
+}
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        if (activeTechModal) {
+            hideTechInfo(activeTechModal);
+        } else {
+            closeModal();
+        }
+    }
+});
+
+// Обработчик клика вне модального окна
 window.onclick = function(event) {
     const modal = document.getElementById('modal');
-    if (event.target == modal) {
+    if (event.target == modal && !activeTechModal) {
         closeModal();
     }
-}
+};
 
-// Add hover effect for image swap
+// Добавляем hover effect для смены изображений
 document.querySelectorAll('.card-wrapper').forEach(wrapper => {
     const img = wrapper.querySelector('.card-screenshot');
     if (img && img.dataset.gif) {
@@ -50,9 +109,12 @@ document.querySelectorAll('.card-wrapper').forEach(wrapper => {
     }
 });
 
-// Close modal when clicking outside
-document.getElementById('modal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeModal();
-    }
+// Предотвращаем клик по карточке, если открыто техническое модальное окно
+document.querySelectorAll('.card-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', function(event) {
+        if (activeTechModal) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    });
 });

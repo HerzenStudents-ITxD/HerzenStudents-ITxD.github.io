@@ -19,7 +19,9 @@
     <div class="container">
         <h2 class="section-title">Проекты</h2>
         <div class="cards-container">
+            <!-- Herzen Tutor -->
             <div class="card-wrapper" onclick="openModal('herzen-tutor')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-herzen-tutor')">i</button>
                 <div class="card">
                     <h3>Herzen tutor</h3>
                     <p class="card-content">Сайт, посвящённый поиску анкет и вакансий</p>
@@ -28,9 +30,36 @@
                         <a href="https://itvd.online/herzen-tutor/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-herzen-tutor" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: PHP, MySQL</li>
+                        <li>frontend: HTML, CSS, JavaScript</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/herzen-tutor-frontend" target="_blank">Фронтенд репозиторий</a></li>
+                        <li><a href="https://github.com/user/herzen-tutor-backend" target="_blank">Бэкенд репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Петр Иванов, backend</li>
+                        <li>Мария Сидорова, frontend</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>фронтенд не связан с бэкендом</li>
+                        <li>используется REST API</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-herzen-tutor')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- CycleApp -->
             <div class="card-wrapper" onclick="openModal('cycleapp')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-cycleapp')">i</button>
                 <div class="card">
                     <h3>CycleApp</h3>
                     <p class="card-content">Приложение для отслеживания менструации</p>
@@ -39,9 +68,36 @@
                         <a href="https://cycleapp.example.com" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-cycleapp" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Node.js, Express</li>
+                        <li>frontend: React, Redux</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/cycleapp-frontend" target="_blank">Фронтенд репозиторий</a></li>
+                        <li><a href="https://github.com/user/cycleapp-backend" target="_blank">Бэкенд репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Анна Петрова, fullstack</li>
+                        <li>Иван Смирнов, дизайн</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>PWA-приложение</li>
+                        <li>Использует IndexedDB для оффлайн-работы</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-cycleapp')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Технопарк Проекты -->
             <div class="card-wrapper" onclick="openModal('technopark-proj')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-technopark-proj')">i</button>
                 <div class="card">
                     <h3>Технопарк Проекты</h3>
                     <p class="card-content">Эффективное и комфортное планирование. Создай свой проект на базе Технопарка РГПУ!</p>
@@ -50,9 +106,35 @@
                         <a href="https://itvd.online/technopark-proj/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-technopark-proj" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Django, PostgreSQL</li>
+                        <li>frontend: Vue.js, Vuetify</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/technopark-proj" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Сергей Кузнецов, backend</li>
+                        <li>Елена Васнецова, frontend</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Интеграция с Google Calendar API</li>
+                        <li>Drag-and-drop интерфейс</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-technopark-proj')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Виртуальный музей -->
             <div class="card-wrapper" onclick="openModal('virtual-museum')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-virtual-museum')">i</button>
                 <div class="card">
                     <h3>Виртуальный музей</h3>
                     <p class="card-content">Виртуальный музей традиционной культуры коренных малочисленных народов Севера, Сибири и Дальнего Востока — цифровая платформа для сохранения и популяризации культурного наследия.</p>
@@ -61,9 +143,37 @@
                         <a href="https://itvd.online/virtual_museum/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-virtual-museum" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Laravel, MySQL</li>
+                        <li>frontend: React, Three.js</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/virtual-museum" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Дмитрий Соколов, 3D-графика</li>
+                        <li>Ольга Иванова, контент</li>
+                        <li>Алексей Петров, разработка</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>3D-тур по музею</li>
+                        <li>Интерактивные экспонаты</li>
+                        <li>Мультиязычная поддержка</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-virtual-museum')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Лендинг ИТвД и Скиллс Паспорт -->
             <div class="card-wrapper" onclick="openModal('itdx-skills')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-itdx-skills')">i</button>
                 <div class="card">
                     <h3>Лендинг ИТвД и Скиллс Паспорт</h3>
                     <p class="card-content">Современный сайт направления «Информационные технологии в дизайне»</p>
@@ -72,9 +182,35 @@
                         <a href="https://www.itvd.online/ITxD-skills/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-itdx-skills" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: WordPress</li>
+                        <li>frontend: HTML, CSS, JavaScript</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/itdx-skills" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Александра Ковалева, дизайн</li>
+                        <li>Максим Новиков, разработка</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Адаптивный дизайн</li>
+                        <li>Интерактивная галерея работ</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-itdx-skills')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Интернет-журнал "Пеликан" -->
             <div class="card-wrapper" onclick="openModal('pelican-magazine')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-pelican-magazine')">i</button>
                 <div class="card">
                     <h3>Интернет-журнал "Пеликан"</h3>
                     <p class="card-content">Сайт для написания, чтения и обмена статьями и конспектами, предназначенный для студентов и преподавателей РГПУ им. А.И.Герцена</p>
@@ -83,9 +219,36 @@
                         <a href="https://www.itvd.online/pelican-magazine/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-pelican-magazine" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Ruby on Rails, PostgreSQL</li>
+                        <li>frontend: StimulusJS, Hotwire</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/pelican-magazine" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Артем Васильев, fullstack</li>
+                        <li>Наталья Семенова, контент</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>WYSIWYG редактор</li>
+                        <li>Система модерации контента</li>
+                        <li>Рейтинговая система статей</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-pelican-magazine')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Вики-сайт -->
             <div class="card-wrapper" onclick="openModal('wiki-guide')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-wiki-guide')">i</button>
                 <div class="card">
                     <h3>Вики-сайт</h3>
                     <p class="card-content">Проект по разработке информационного сайта к игре</p>
@@ -94,9 +257,35 @@
                         <a href="https://www.itvd.online/wiki-guide/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-wiki-guide" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Python, Flask</li>
+                        <li>frontend: Bootstrap, jQuery</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/wiki-guide" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Игорь Лебедев, разработка</li>
+                        <li>Екатерина Морозова, контент</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Система категорий и тегов</li>
+                        <li>Поиск по контенту</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-wiki-guide')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Herzen Книги -->
             <div class="card-wrapper" onclick="openModal('herzen-books')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-herzen-books')">i</button>
                 <div class="card">
                     <h3>Herzen Книги</h3>
                     <p class="card-content">Книжный магазин</p>
@@ -105,9 +294,35 @@
                         <a href="https://www.itvd.online/herzenbooks/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-herzen-books" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: Node.js, MongoDB</li>
+                        <li>frontend: Next.js</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/herzen-books" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Павел Смирнов, fullstack</li>
+                        <li>Алина Кузнецова, дизайн</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Система корзины и оформления заказа</li>
+                        <li>Интеграция с платежной системой</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-herzen-books')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Открытый кампус -->
             <div class="card-wrapper" onclick="openModal('open-campus')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-open-campus')">i</button>
                 <div class="card">
                     <h3>Открытый кампус</h3>
                     <p class="card-content">Открытый кампус РГПУ им. А. И. Герцена — это пространство в исторических зданиях Герценовского университета, где проходят образовательные и научные мероприятия.</p>
@@ -116,9 +331,35 @@
                         <a href="https://itvd.online/open-campus/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-open-campus" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: PHP, Laravel</li>
+                        <li>frontend: Vue.js</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/open-campus" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Денис Федоров, backend</li>
+                        <li>Светлана Иванова, frontend</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Календарь мероприятий</li>
+                        <li>Система бронирования мест</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-open-campus')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- 3d карта -->
             <div class="card-wrapper" onclick="openModal('herzen-map')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-herzen-map')">i</button>
                 <div class="card">
                     <h3>3d карта</h3>
                     <p class="card-content">Всё для студентов РГПУ в одном месте: 3D-карта кампуса, расписание с навигацией, актуальные новости и личный кабинет.</p>
@@ -127,9 +368,35 @@
                         <a href="https://itvd.online/herzen-map/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-herzen-map" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>backend: ASP.NET Core</li>
+                        <li>frontend: Three.js, React</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/herzen-map" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Андрей Павлов, 3D-графика</li>
+                        <li>Виктория Семенова, разработка</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Интерактивная 3D-карта</li>
+                        <li>Интеграция с расписанием</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-herzen-map')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
 
+            <!-- Грибы -->
             <div class="card-wrapper" onclick="openModal('mushroom-hunter')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-mushroom-hunter')">i</button>
                 <div class="card">
                     <h3>Грибы</h3>
                     <p class="card-content">3D игра от первого лица, где можно собирать и изучать грибы.</p>
@@ -138,10 +405,35 @@
                         <a href="https://itvd.online/mushroom-hunter/" class="btn">Перейти</a>
                     </div>
                 </div>
+                
+                <div id="tech-mushroom-hunter" class="tech-info-content">
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>Игровой движок: Unity</li>
+                        <li>Язык программирования: C#</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/user/mushroom-hunter" target="_blank">Основной репозиторий</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Михаил Орлов, геймдизайн</li>
+                        <li>Анна Власова, 3D-модели</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Реалистичная физика сбора грибов</li>
+                        <li>Энциклопедия грибов в игре</li>
+                    </ul>
+                    <button onclick="hideTechInfo('tech-mushroom-hunter')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Основное модальное окно -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">×</span>
