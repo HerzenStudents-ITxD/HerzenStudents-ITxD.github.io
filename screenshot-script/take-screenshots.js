@@ -4,17 +4,18 @@ const path = require('path');
 
 // List of websites to screenshot
 const sites = [
-    { id: 'herzen-tutor', url: 'https://itvd.online/herzen-tutor/' },
-    // { id: 'cycleapp', url: 'https://cycleapp.example.com' },
-    { id: 'technopark-proj', url: 'https://itvd.online/technopark-proj/' },
-    { id: 'virtual-museum', url: 'https://itvd.online/virtual_museum/' },
-    { id: 'itdx-skills', url: 'https://www.itvd.online/ITxD-skills/' },
-    { id: 'pelican-magazine', url: 'https://www.itvd.online/pelican-magazine/' },
-    { id: 'wiki-guide', url: 'https://www.itvd.online/wiki-guide/' },
-    { id: 'herzen-books', url: 'https://www.itvd.online/herzenbooks/' },
-    { id: 'open-campus', url: 'https://itvd.online/open-campus/' },
-    { id: 'herzen-map', url: 'https://itvd.online/herzen-map/', delay: 5000 }, // Задержка 5 сек
-    { id: 'mushroom-hunter', url: 'https://itvd.online/mushroom-hunter/', delay: 5000 } // Задержка 5 сек
+    //{ id: 'herzen-tutor', url: 'https://itvd.online/herzen-tutor/about_project/' },
+    // // { id: 'cycleapp', url: 'https://cycleapp.example.com' },
+    // { id: 'technopark-proj', url: 'https://itvd.online/technopark-proj/' },
+    // { id: 'virtual-museum', url: 'https://itvd.online/virtual_museum/' },
+    // { id: 'itdx-skills', url: 'https://www.itvd.online/ITxD-skills/' },
+    //{ id: 'itdx-docs', url: 'https://www.itvd.online/ITxD-docs/' },
+    // { id: 'pelican-magazine', url: 'https://www.itvd.online/pelican-magazine/' },
+    // { id: 'wiki-guide', url: 'https://www.itvd.online/wiki-guide/' },
+    // { id: 'herzen-books', url: 'https://www.itvd.online/herzenbooks/' },
+    // { id: 'open-campus', url: 'https://itvd.online/open-campus/' },
+    // { id: 'herzen-map', url: 'https://itvd.online/herzen-map/', delay: 5000 }, // Задержка 5 сек
+    // { id: 'mushroom-hunter', url: 'https://itvd.online/mushroom-hunter/', delay: 5000 } // Задержка 5 сек
 ];
 
 // Delay function

@@ -17,84 +17,85 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 // List of sites with specific actions
 const sites = [
-    { id: 'herzen-tutor', url: 'https://itvd.online/herzen-tutor/' },
-    { id: 'technopark-proj', url: 'https://itvd.online/technopark-proj/' },
-    { id: 'virtual-museum', url: 'https://itvd.online/virtual_museum/' },
-    { id: 'itdx-skills', url: 'https://www.itvd.online/ITxD-skills/' },
-    { id: 'pelican-magazine', url: 'https://www.itvd.online/pelican-magazine/' },
-    { id: 'wiki-guide', url: 'https://www.itvd.online/wiki-guide/' },
-    { id: 'herzen-books', url: 'https://www.itvd.online/herzenbooks/' },
-    { id: 'open-campus', url: 'https://itvd.online/open-campus/' },
-    {
-        id: 'herzen-map',
-        url: 'https://itvd.online/herzen-map/',
-        is3D: true,
-        actions: async (page, frameIndex, totalFrames) => {
-            const centerX = WIDTH / 2;
-            const centerY = HEIGHT / 2;
-            const progress = frameIndex / (totalFrames - 1);
-            const maxMoveX = 600; // Max sideways movement
+    //{ id: 'herzen-tutor', url: 'https://itvd.online/herzen-tutor/about_project' },
+    // { id: 'technopark-proj', url: 'https://itvd.online/technopark-proj/' },
+    // { id: 'virtual-museum', url: 'https://itvd.online/virtual_museum/' },
+    // { id: 'itdx-skills', url: 'https://www.itvd.online/ITxD-skills/' },
+    //{ id: 'itdx-docs', url: 'https://www.itvd.online/ITxD-docs/' },
+    // { id: 'pelican-magazine', url: 'https://www.itvd.online/pelican-magazine/' },
+    // { id: 'wiki-guide', url: 'https://www.itvd.online/wiki-guide/' },
+    // { id: 'herzen-books', url: 'https://www.itvd.online/herzenbooks/' },
+    // { id: 'open-campus', url: 'https://itvd.online/open-campus/' },
+    // {
+    //     id: 'herzen-map',
+    //     url: 'https://itvd.online/herzen-map/',
+    //     is3D: true,
+    //     actions: async (page, frameIndex, totalFrames) => {
+    //         const centerX = WIDTH / 2;
+    //         const centerY = HEIGHT / 2;
+    //         const progress = frameIndex / (totalFrames - 1);
+    //         const maxMoveX = 600; // Max sideways movement
 
-            if (frameIndex === 0) {
-                console.log('Initializing herzen-map camera...');
-                // Reset scroll and set initial camera height
-                await page.evaluate(() => {
-                    window.scrollTo(0, 0);
-                    document.body.style.overflow = 'hidden';
-                    if (window.camera) {
-                        window.camera.position.set(0, 5, 10); // Higher initial position
-                    }
-                });
-                await page.mouse.move(centerX, centerY);
-                await page.mouse.down(); // Start dragging
-            }
+    //         if (frameIndex === 0) {
+    //             console.log('Initializing herzen-map camera...');
+    //             // Reset scroll and set initial camera height
+    //             await page.evaluate(() => {
+    //                 window.scrollTo(0, 0);
+    //                 document.body.style.overflow = 'hidden';
+    //                 if (window.camera) {
+    //                     window.camera.position.set(0, 5, 10); // Higher initial position
+    //                 }
+    //             });
+    //             await page.mouse.move(centerX, centerY);
+    //             await page.mouse.down(); // Start dragging
+    //         }
 
-            // Smooth sideways movement during frame capture
-            const moveX = centerX + maxMoveX * progress;
-            await page.mouse.move(moveX, centerY, { steps: 10 });
-            console.log(`herzen-map frame ${frameIndex + 1}: Moved to x=${moveX}`);
+    //         // Smooth sideways movement during frame capture
+    //         const moveX = centerX + maxMoveX * progress;
+    //         await page.mouse.move(moveX, centerY, { steps: 10 });
+    //         console.log(`herzen-map frame ${frameIndex + 1}: Moved to x=${moveX}`);
 
-            if (frameIndex === totalFrames - 1) {
-                await page.mouse.up(); // Release LMB at the end
-            }
-        }
-    },
-    {
-        id: 'mushroom-hunter',
-        url: 'https://itvd.online/mushroom-hunter/',
-        is3D: true,
-        actions: async (page, frameIndex, totalFrames) => {
-            const centerX = WIDTH / 2;
-            const centerY = HEIGHT / 2;
-            const progress = frameIndex / (totalFrames - 1);
-            const maxMoveX = 600; // Max sideways movement
+    //         if (frameIndex === totalFrames - 1) {
+    //             await page.mouse.up(); // Release LMB at the end
+    //         }
+    //     }
+    // },
+    // {
+    //     id: 'mushroom-hunter',
+    //     url: 'https://itvd.online/mushroom-hunter/',
+    //     is3D: true,
+    //     actions: async (page, frameIndex, totalFrames) => {
+    //         const centerX = WIDTH / 2;
+    //         const centerY = HEIGHT / 2;
+    //         const progress = frameIndex / (totalFrames - 1);
+    //         const maxMoveX = 600; // Max sideways movement
 
-            if (frameIndex === 0) {
-                console.log('Initializing mushroom-hunter camera...');
-                // Reset scroll and set initial camera position
-                await page.evaluate(() => {
-                    window.scrollTo(0, 0);
-                    document.body.style.overflow = 'hidden';
-                    if (window.camera) {
-                        window.camera.position.set(0, 0, 0); // Reset to origin
-                    }
-                });
-                await page.keyboard.down('w'); // Start holding 'w'
-                await page.mouse.move(centerX, centerY);
-                await page.mouse.click(centerX, centerY); // Initial LMB click
-                console.log('mushroom-hunter: Started holding "w" and clicked');
-            }
+    //         if (frameIndex === 0) {
+    //             console.log('Initializing mushroom-hunter camera...');
+    //             // Reset scroll and set initial camera position
+    //             await page.evaluate(() => {
+    //                 window.scrollTo(0, 0);
+    //                 document.body.style.overflow = 'hidden';
+    //                 if (window.camera) {
+    //                     window.camera.position.set(0, 0, 0); // Reset to origin
+    //                 }
+    //             });
+    //             await page.keyboard.down('w'); // Start holding 'w'
+    //             await page.mouse.move(centerX, centerY);
+    //             await page.mouse.click(centerX, centerY); // Initial LMB click
+    //             console.log('mushroom-hunter: Started holding "w" and clicked');
+    //         }
 
-            // Smooth sideways movement during frame capture
-            const moveX = centerX + maxMoveX * progress;
-            await page.mouse.move(moveX, centerY, { steps: 10 });
-            console.log(`mushroom-hunter frame ${frameIndex + 1}: Moved to x=${moveX}`);
+    //         // Smooth sideways movement during frame capture
+    //         const moveX = centerX + maxMoveX * progress;
+    //         await page.mouse.move(moveX, centerY, { steps: 10 });
+    //         console.log(`mushroom-hunter frame ${frameIndex + 1}: Moved to x=${moveX}`);
 
-            if (frameIndex === totalFrames - 1) {
-                await page.keyboard.up('w'); // Release 'w' at the end
-            }
-        }
-    }
+    //         if (frameIndex === totalFrames - 1) {
+    //             await page.keyboard.up('w'); // Release 'w' at the end
+    //         }
+    //     }
+    // }
 ];
 
 async function ensurePlaywrightBrowsers() {

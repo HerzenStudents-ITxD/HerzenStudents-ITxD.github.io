@@ -32,6 +32,7 @@
                 </div>
                 
                 <div id="tech-herzen-tutor" class="tech-info-content">
+                    <span class="tech-info-close" onclick="hideTechInfo('tech-herzen-tutor')">×</span>
                     <h3>Техническая информация</h3>
                     <p><strong>Стек:</strong></p>
                     <ul>
@@ -53,7 +54,6 @@
                         <li>фронтенд не связан с бэкендом</li>
                         <li>используется REST API</li>
                     </ul>
-                    <button onclick="hideTechInfo('tech-herzen-tutor')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
                 </div>
             </div>
 
@@ -205,6 +205,46 @@
                         <li>Интерактивная галерея работ</li>
                     </ul>
                     <button onclick="hideTechInfo('tech-itdx-skills')" style="margin-top: 15px; padding: 8px 16px; background: var(--color-3); color: white; border: none; border-radius: 4px; cursor: pointer;">Закрыть</button>
+                </div>
+            </div>
+
+            <!-- Лендинг ИТвД и Скиллс Паспорт Документация -->
+            <div class="card-wrapper" onclick="openModal('itdx-docs')">
+                <button class="tech-info-btn" onclick="event.stopPropagation(); showTechInfo('tech-itdx-docs')">i</button>
+                <div class="card">
+                    <h3>ITxD Документация</h3>
+                    <p class="card-content">Техническая документация для проекта ITxD Skills, созданная с помощью Docusaurus</p>
+                    <img src="screenshot-script/public/itdx-docs.png" data-gif="screenshot-script/public/itdx-docs.gif" alt="ITxD Docs Screenshot" class="card-screenshot">
+                    <div class="btn-container">
+                        <a href="https://itvd.online/ITxD-docs/" class="btn">Перейти</a>
+                    </div>
+                </div>
+                
+                <div id="tech-itdx-docs" class="tech-info-content">
+                    <span class="tech-info-close" onclick="hideTechInfo('tech-itdx-docs')">×</span>
+                    <h3>Техническая информация</h3>
+                    <p><strong>Стек:</strong></p>
+                    <ul>
+                        <li>Платформа: Docusaurus v2</li>
+                        <li>Язык: Markdown/MDX</li>
+                        <li>Хостинг: GitHub Pages</li>
+                    </ul>
+                    <p><strong>GitHub:</strong></p>
+                    <ul>
+                        <li><a href="https://github.com/ваш-логин/itdx-docs" target="_blank">Репозиторий документации</a></li>
+                    </ul>
+                    <p><strong>Команда:</strong></p>
+                    <ul>
+                        <li>Иван Петров, документация</li>
+                        <li>Анна Сидорова, технический редактор</li>
+                    </ul>
+                    <p><strong>Особенности:</strong></p>
+                    <ul>
+                        <li>Автоматическая сборка при изменениях</li>
+                        <li>Поддержка темного/светлого режима</li>
+                        <li>Поиск по документации</li>
+                        <li>Версионирование документации</li>
+                    </ul>
                 </div>
             </div>
 
@@ -489,6 +529,19 @@
                 <p>Современный сайт направления «Информационные технологии в дизайне» для абитуриентов, студентов и потенциальных работодателей.</p>
                 <p>На сайте можно найти полную информацию о направление «Информационные технологии в дизайне» и лаборатории визуализации и компьютерной графики, ознакомится с работами студентов на Скиллс Паспорте.</p>
                 <a href="https://www.itvd.online/ITxD-skills/" class="btn">Перейти на сайт</a>
+            </div>
+            <div id="modal-itdx-docs" class="modal-text">
+                <h2>ITxD Документация</h2>
+                <p>Полная техническая документация для проекта Лендинг ИТвД и Скиллс Паспорт, созданная с использованием статического генератора сайтов Docusaurus.</p>
+                <p>Основные возможности:</p>
+                <ul>
+                    <li>Автоматическая генерация документации из Markdown файлов</li>
+                    <li>Встроенная система поиска</li>
+                    <li>Поддержка версионирования документации</li>
+                    <li>API Reference секция</li>
+                    <li>Интерактивные примеры кода</li>
+                </ul>
+                <a href="https://itvd.online//ITxD-docs/" class="btn">Перейти к документации</a>
             </div>
             <div id="modal-pelican-magazine" class="modal-text">
                 <h2>Интернет-журнал "Пеликан"</h2>
