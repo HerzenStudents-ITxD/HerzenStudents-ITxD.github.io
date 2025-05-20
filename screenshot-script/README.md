@@ -10,4 +10,4 @@
 - npm i
 - npx playwright install
 - npx playwright install-deps
-- node take-screenshots.js
+- node take-gif.js
